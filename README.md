@@ -46,28 +46,6 @@ First pass at troubleshooting (update system library cache):
 sudo ldconfig
 ```
 
-## Naive PUB/SUB with Sockets
-
-Beacon application: fires an event once a second.
-
-```js
-{
-  "pid": 12345,
-  "timestamp": 1404168475695
-}
-```
-
-PUB program: [net-beacon-pub.js](net-beacon-pub.js)
-
-SUB program: [net-beacon-sub.js](net-beacon-sub.js)
-
-## What's Wrong With That?
-
-* Listener bias.
-* Fault intolerant.
-* Leaky buffers.
-* Directionality (Publisher = Listener).
-
 ## PUB/SUB with ØMQ
 
 Same beacon application.
